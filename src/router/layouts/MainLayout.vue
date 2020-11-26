@@ -1,17 +1,16 @@
 <script>
+import TheNavBar from '../../components/TheNavBar';
+
 export default {
-  
+  components: {
+    TheNavBar
+  }
 };
 </script>
 
 <template>
   <div class="mainLayout">
-    <RouterLink to="/">
-      Home
-    </RouterLink> | 
-    <RouterLink to="/about">
-      About
-    </RouterLink>
+    <TheNavBar />
     <slot />
   </div>
 </template>

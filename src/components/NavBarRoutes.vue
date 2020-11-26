@@ -1,6 +1,9 @@
 <script>
+import BaseLink from './_BaseLink';
+
 export default {
   name: 'NavBarRoutes',
+  components: { BaseLink },
   props: {
     routes: {
       type: Array,
@@ -11,5 +14,16 @@ export default {
 </script>
 
 <template>
-  <div>Hi</div>
+  <ul>
+    <li 
+      v-for="route in routes"
+      :key="route.name"
+    >
+      <BaseLink 
+        :to="route"
+      >
+        {{ route.title }}
+      </BaseLink>
+    </li>
+  </ul>
 </template>
