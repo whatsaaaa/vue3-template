@@ -1,11 +1,16 @@
-<template>
-  <div class="about">
-    About page.
-  </div>
-</template>
-
 <script>
+import Layout from '../layouts/MainLayout';
+
 export default {
-  name: 'About'
+  name: 'Home',
+  components: { Layout }
 };
 </script>
+
+<template>
+  <Layout>
+    <div class="home">
+      About page.
+    </div>
+  </Layout>
+</template>

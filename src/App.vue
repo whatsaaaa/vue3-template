@@ -13,6 +13,9 @@
 
 <!-- This should generally be the only global CSS in the app. -->
 <style lang="scss">
+// Style loading bar between pages.
+@import '~nprogress/nprogress.css';
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
