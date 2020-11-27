@@ -1,5 +1,5 @@
 <script>
-import Layout from "../layouts/MainLayout";
+import Layout from "../layouts/main-layout.vue";
 
 export default {
   name: "Home",
