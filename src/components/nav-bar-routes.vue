@@ -1,8 +1,5 @@
 <script>
-import BaseLink from "./_base-link.vue";
-
 export default {
-  components: { BaseLink },
   props: {
     routes: {
       type: Array,
