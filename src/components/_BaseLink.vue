@@ -40,7 +40,7 @@ export default {
     <slot />
   </a>
 
-  <RouterLink v-else :to="routerLinkTo" v-bind="$attrs">
+  <router-link v-else :to="routerLinkTo" v-bind="$attrs">
     <slot />
-  </RouterLink>
+  </router-link>
 </template>

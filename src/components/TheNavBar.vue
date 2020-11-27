@@ -1,5 +1,5 @@
 <script>
-import NavBarRoutes from "./NavBarRoutes";
+import NavBarRoutes from "./NavBarRoutes.vue";
 
 export default {
   name: "TheNavBar",
@@ -25,7 +25,7 @@ export default {
 
 <template>
   <ul class="theNavBar">
-    <NavBarRoutes :routes="navRoutes" />
+    <nav-bar-routes :routes="navRoutes" />
   </ul>
 </template>
 

@@ -1,5 +1,5 @@
 <script>
-import TheNavBar from "../../components/TheNavBar";
+import TheNavBar from "../../components/TheNavBar.vue";
 
 export default {
   components: {
@@ -10,7 +10,7 @@ export default {
 
 <template>
   <div class="mainLayout">
-    <TheNavBar />
+    <the-nav-bar />
     <slot />
   </div>
 </template>

@@ -5,8 +5,8 @@
     event when routes are using the same component. With
     this approach it will treat them as distinct and create 
     the component again.
-    -->
-  <RouterView :key="$route.fullPath" />
+  -->
+  <router-view :key="$route.fullPath" />
 </template>
 
 <!-- This should generally be the only global CSS in the app. -->
