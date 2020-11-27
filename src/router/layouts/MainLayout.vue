@@ -1,5 +1,5 @@
 <script>
-import TheNavBar from "../../components/TheNavBar.vue";
+import TheNavBar from "../../components/the-nav-bar.vue";
 
 export default {
   components: {

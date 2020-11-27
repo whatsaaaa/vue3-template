@@ -1,8 +1,7 @@
 <script>
-import NavBarRoutes from "./NavBarRoutes.vue";
+import NavBarRoutes from "./nav-bar-routes.vue";
 
 export default {
-  name: "TheNavBar",
   components: {
     NavBarRoutes,
   },

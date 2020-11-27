@@ -1,8 +1,7 @@
 <script>
-import BaseLink from "./_BaseLink";
+import BaseLink from "./_base-link.vue";
 
 export default {
-  name: "NavBarRoutes",
   components: { BaseLink },
   props: {
     routes: {
