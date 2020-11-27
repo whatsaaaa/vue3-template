@@ -14,11 +14,9 @@ export default {
 </script>
 
 <template>
-  <ul>
-    <li v-for="route in routes" :key="route.name">
-      <BaseLink :to="route">
-        {{ route.title }}
-      </BaseLink>
-    </li>
-  </ul>
+  <li v-for="route in routes" :key="route.name">
+    <BaseLink :to="route">
+      {{ route.title }}
+    </BaseLink>
+  </li>
 </template>

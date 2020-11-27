@@ -24,9 +24,9 @@ export default {
 </script>
 
 <template>
-  <div class="theNavBar">
+  <ul class="theNavBar">
     <NavBarRoutes :routes="navRoutes" />
-  </div>
+  </ul>
 </template>
 
 <style lang="scss">
@@ -34,17 +34,14 @@ export default {
   padding: 0;
   margin: 0 0 12px;
   text-align: center;
+  list-style-type: none;
 
-  > ul {
-    list-style-type: none;
+  > li {
+    display: inline-block;
+    margin-right: 6px;
 
-    > li {
-      display: inline-block;
-      margin-right: 6px;
-
-      > a {
-        text-decoration: none;
-      }
+    > a {
+      text-decoration: none;
     }
   }
 }
