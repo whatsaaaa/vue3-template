@@ -12,7 +12,6 @@
   "rules": {
     "quotes": ["error", "double"],
     "linebreak-style": ["error", "unix"],
-    "array-bracket-spacing": ["error", "always"],
     "semi": ["error", "always"],
     "eol-last": ["error", "always"],
     "indent": ["error", 2]
