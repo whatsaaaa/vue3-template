@@ -4,7 +4,10 @@
     "node": true,
     "mocha": true
   },
-  "extends": ["eslint:recommended", "plugin:vue/recommended"],
+  "extends": [      
+    "plugin:vue/vue3-essential",
+    "eslint:recommended"
+  ],
   "rules": {
     "comma-dangle": "error",
     "quotes": ["error", "single"],
