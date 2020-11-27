@@ -6,11 +6,11 @@
   },
   "extends": [      
     "plugin:vue/vue3-essential",
-    "eslint:recommended"
+    "eslint:recommended",
+    "@vue/prettier"
   ],
   "rules": {
-    "comma-dangle": "error",
-    "quotes": ["error", "single"],
+    "quotes": ["error", "double"],
     "linebreak-style": ["error", "unix"],
     "array-bracket-spacing": ["error", "always"],
     "semi": ["error", "always"],

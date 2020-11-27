@@ -1,25 +1,25 @@
 <script>
-import NavBarRoutes from './NavBarRoutes';
+import NavBarRoutes from "./NavBarRoutes";
 
 export default {
-  name: 'TheNavBar',
+  name: "TheNavBar",
   components: {
-    NavBarRoutes
+    NavBarRoutes,
   },
   data() {
     return {
       navRoutes: [
         {
-          name: 'home',
-          title: 'Home'
+          name: "home",
+          title: "Home",
         },
         {
-          name: 'about',
-          title: 'About'
-        }
-      ]
+          name: "about",
+          title: "About",
+        },
+      ],
     };
-  }
+  },
 };
 </script>
 
@@ -34,7 +34,7 @@ export default {
   padding: 0;
   margin: 0 0 12px;
   text-align: center;
-  
+
   > ul {
     list-style-type: none;
 

@@ -1,27 +1,22 @@
 <script>
-import BaseLink from './_BaseLink';
+import BaseLink from "./_BaseLink";
 
 export default {
-  name: 'NavBarRoutes',
+  name: "NavBarRoutes",
   components: { BaseLink },
   props: {
     routes: {
       type: Array,
-      required: true
-    }
-  }
+      required: true,
+    },
+  },
 };
 </script>
 
 <template>
   <ul>
-    <li 
-      v-for="route in routes"
-      :key="route.name"
-    >
-      <BaseLink 
-        :to="route"
-      >
+    <li v-for="route in routes" :key="route.name">
+      <BaseLink :to="route">
         {{ route.title }}
       </BaseLink>
     </li>

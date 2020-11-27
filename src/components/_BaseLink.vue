@@ -4,52 +4,43 @@ export default {
   props: {
     href: {
       type: String,
-      default: ''
+      default: "",
     },
     allowInsecure: {
       type: Boolean,
-      default: false
+      default: false,
     },
     to: {
       type: Object,
-      default: null
+      default: null,
     },
     name: {
       type: String,
-      default: ''
+      default: "",
     },
     params: {
       type: Object,
-      default: () => ({})
-    }
+      default: () => ({}),
+    },
   },
   computed: {
     routerLinkTo({ name, params }) {
       return {
         name,
         params,
-        ...(this.to || {})
+        ...(this.to || {}),
       };
-    }
-  }
+    },
+  },
 };
 </script>
 
 <template>
-  <a
-    v-if="href"
-    :href="href"
-    target="_blank"
-    v-bind="$attrs"
-  >
+  <a v-if="href" :href="href" target="_blank" v-bind="$attrs">
     <slot />
   </a>
 
-  <RouterLink
-    v-else
-    :to="routerLinkTo"
-    v-bind="$attrs"
-  >
+  <RouterLink v-else :to="routerLinkTo" v-bind="$attrs">
     <slot />
   </RouterLink>
 </template>

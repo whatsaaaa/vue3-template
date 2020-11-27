@@ -1,11 +1,11 @@
-import { createRouter, createWebHistory } from 'vue-router';
-import NProgress from 'nprogress/nprogress';
+import { createRouter, createWebHistory } from "vue-router";
+import NProgress from "nprogress/nprogress";
 
-import routes from './routes';
+import routes from "./routes";
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes
+  routes,
 });
 
 router.beforeEach((routeTo, routeFrom) => {
