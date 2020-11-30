@@ -27,10 +27,7 @@ export default {
   <input
     :type="type"
     :value="modelValue"
-    v-bind="
-      $attrs
-      // https://vuejs.org/v2/guide/components-props.html#Disabling-Attribute-Inheritance
-    "
+    v-bind="$attrs"
     @input="$emit('update:modelValue', $event.target.value)"
   />
 </template>
