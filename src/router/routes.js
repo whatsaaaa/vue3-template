@@ -35,6 +35,7 @@ export default [
   {
     path: "/logout",
     name: "logout",
+    component: () => import("./views/about.vue"),
     meta: {
       authRequired: true,
       beforeResolve(routeTo, routeFrom, next) {

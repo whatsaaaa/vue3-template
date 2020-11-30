@@ -1,5 +1,58 @@
 <script>
-export default {};
+import Layout from "../layouts/main-layout.vue";
+import { authMethods } from "../../store/helpers";
+
+export default {
+  components: { Layout },
+  data() {
+    return {
+      username: "",
+      password: "",
+      authError: null,
+      tryingToLogIn: false,
+    };
+  },
+  methods: {
+    ...authMethods,
+    // Try to log the user in with the username
+    // and password they provided.
+    tryToLogIn() {
+      console.log("Here");
+      console.log(this.username);
+      console.log(this.password);
+      this.tryingToLogIn = true;
+      // Reset the authError if it existed.
+      this.authError = null;
+      return this.logIn({
+        username: this.username,
+        password: this.password,
+      })
+        .then(() => {
+          this.tryingToLogIn = false;
+          // Redirect to the originally requested page, or to the home page
+          this.$router.push(this.$route.query.redirectFrom || { name: "home" });
+        })
+        .catch((error) => {
+          this.tryingToLogIn = false;
+          this.authError = error;
+        });
+    },
+  },
+};
 </script>
 
-<template>Login...</template>
+<template>
+  <Layout>
+    <form @submit.prevent="tryToLogIn">
+      <!-- <input v-model="username" />
+      <input v-model="password" /> -->
+      <BaseInputText v-model="username" name="username" />
+      <BaseInputText v-model="password" name="password" type="password" />
+      <BaseButton :disabled="tryingToLogIn" type="submit">
+        <BaseIcon v-if="tryingToLogIn" name="sync" spin />
+        <span v-else> Log in </span>
+      </BaseButton>
+      <p v-if="authError">There was an error logging in to your account.</p>
+    </form>
+  </Layout>
+</template>
