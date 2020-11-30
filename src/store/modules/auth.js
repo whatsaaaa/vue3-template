@@ -14,7 +14,7 @@ export const mutations = {
 
 export const getters = {
   loggedIn(state) {
-    return !state.currentUser;
+    return !!state.currentUser;
   },
 };
 
