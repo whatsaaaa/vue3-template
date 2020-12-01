@@ -2,7 +2,6 @@
 import Layout from "../layouts/main-layout.vue";
 
 export default {
-  name: "Home",
   components: { Layout },
 };
 </script>
