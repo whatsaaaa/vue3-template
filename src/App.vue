@@ -11,14 +11,36 @@
 
 <!-- This should generally be the only global CSS in the app. -->
 <style lang="scss">
+// Normalize default styles across browsers,
+// https://necolas.github.io/normalize.css/
+@import "~normalize.css/normalize.css";
 // Style loading bar between pages.
 @import "~nprogress/nprogress.css";
+// Design variables and utilities from scr/design
+@import "./design/";
 
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: $color-body-bg;
+}
+
+// ===
+// Base element styles
+// ===
+a,
+a:visited {
+  color: $color-link-text;
+}
+
+// ===
+// Vendor
+// ===
+#nprogress .bar {
+  background: $color-link-text;
 }
 </style>
