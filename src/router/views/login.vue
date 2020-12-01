@@ -17,9 +17,6 @@ export default {
     // Try to log the user in with the username
     // and password they provided.
     tryToLogIn() {
-      console.log("Here");
-      console.log(this.username);
-      console.log(this.password);
       this.tryingToLogIn = true;
       // Reset the authError if it existed.
       this.authError = null;
