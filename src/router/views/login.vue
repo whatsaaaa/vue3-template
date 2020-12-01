@@ -41,8 +41,6 @@ export default {
 <template>
   <Layout>
     <form @submit.prevent="tryToLogIn">
-      <!-- <input v-model="username" />
-      <input v-model="password" /> -->
       <BaseInputText v-model="username" name="username" />
       <BaseInputText v-model="password" name="password" type="password" />
       <BaseButton :disabled="tryingToLogIn" type="submit">
