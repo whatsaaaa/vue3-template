@@ -2,13 +2,23 @@
 import Layout from "../layouts/main-layout.vue";
 
 export default {
-  name: "Home",
   components: { Layout },
+  props: {
+    user: {
+      type: Object,
+      required: true,
+    },
+  },
 };
 </script>
 
 <template>
   <Layout>
-    <div class="home">About page.</div>
+    <h1>
+      <BaseIcon name="user" />
+      {{ user.name }}
+      Profile
+    </h1>
+    <pre>{{ user }}</pre>
   </Layout>
 </template>
