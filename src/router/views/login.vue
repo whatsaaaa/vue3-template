@@ -12,6 +12,13 @@ export default {
       tryingToLogIn: false,
     };
   },
+  computed: {
+    placeholders() {
+      return process.env.NODE_ENV === "production"
+        ? {}
+        : { username: "admin", password: "password" };
+    },
+  },
   methods: {
     ...authMethods,
     // Try to log the user in with the username
@@ -41,8 +48,17 @@ export default {
 <template>
   <Layout>
     <form @submit.prevent="tryToLogIn">
-      <BaseInputText v-model="username" name="username" />
-      <BaseInputText v-model="password" name="password" type="password" />
+      <BaseInputText
+        v-model="username"
+        name="username"
+        :placeholder="placeholders.username"
+      />
+      <BaseInputText
+        v-model="password"
+        name="password"
+        type="password"
+        :placeholder="placeholders.password"
+      />
       <BaseButton :disabled="tryingToLogIn" type="submit">
         <BaseIcon v-if="tryingToLogIn" name="sync" spin />
         <span v-else> Log in </span>
