@@ -12,7 +12,7 @@ export const mutations = {
   },
 };
 
-export const axtions = {
+export const actions = {
   fetchUser({ commit, state, rootState }, { username }) {
     // 1. Check if we already have the user as a current user.
     const { currentUser } = rootState.auth;
