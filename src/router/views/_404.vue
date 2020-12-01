@@ -13,16 +13,14 @@ export default {
 </script>
 
 <template>
-  <div class="notFound">
-    <Layout>
-      <h1>
-        404
-        <template v-if="resource">
-          {{ resource }}
-        </template>
-      </h1>
-    </Layout>
-  </div>
+  <Layout class="notFound">
+    <h1>
+      404
+      <template v-if="resource">
+        {{ resource }}
+      </template>
+    </h1>
+  </Layout>
 </template>
 
 <style lang="scss">

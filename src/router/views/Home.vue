@@ -7,7 +7,7 @@ export default {
 </script>
 
 <template>
-  <Layout>
-    <div class="home">Home page.</div>
+  <Layout class="Home">
+    <p>Home page.</p>
   </Layout>
 </template>

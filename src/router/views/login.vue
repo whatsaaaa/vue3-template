@@ -46,7 +46,7 @@ export default {
 </script>
 
 <template>
-  <Layout>
+  <Layout class="Login">
     <form @submit.prevent="tryToLogIn">
       <BaseInputText
         v-model="username"

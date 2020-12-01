@@ -13,7 +13,7 @@ export default {
 </script>
 
 <template>
-  <Layout>
+  <Layout class="About">
     <h1>
       <BaseIcon name="user" />
       {{ user.name }}
