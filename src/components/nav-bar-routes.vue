@@ -6,13 +6,18 @@ export default {
       required: true,
     },
   },
+  methods: {
+    getTitle(route) {
+      return typeof route.title === "function" ? route.title() : route.title;
+    },
+  },
 };
 </script>
 
 <template>
   <li v-for="route in routes" :key="route.name">
     <BaseLink :to="route">
-      {{ route.title }}
+      {{ getTitle(route) }}
     </BaseLink>
   </li>
 </template>

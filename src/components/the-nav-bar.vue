@@ -1,4 +1,5 @@
 <script>
+import { authComputed } from "../store/helpers";
 import NavBarRoutes from "./nav-bar-routes.vue";
 
 export default {
@@ -7,24 +8,41 @@ export default {
   },
   data() {
     return {
-      navRoutes: [
+      persistentNavRoutes: [
         {
           name: "home",
           title: "Home",
         },
+      ],
+      loggedInNavRoutes: [
         {
           name: "about",
-          title: "About",
+          title: () => "Logged in as " + this.currentUser.name,
+        },
+        {
+          name: "logout",
+          title: "Log out",
+        },
+      ],
+      loggedOutNavRoutes: [
+        {
+          name: "login",
+          title: "Log in",
         },
       ],
     };
+  },
+  computed: {
+    ...authComputed,
   },
 };
 </script>
 
 <template>
   <ul class="theNavBar">
-    <nav-bar-routes :routes="navRoutes" />
+    <NavBarRoutes :routes="persistentNavRoutes" />
+    <NavBarRoutes v-if="loggedIn" :routes="loggedInNavRoutes" />
+    <NavBarRoutes v-else :routes="loggedOutNavRoutes" />
   </ul>
 </template>
 
