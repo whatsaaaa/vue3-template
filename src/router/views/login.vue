@@ -1,9 +1,10 @@
 <script>
 import Layout from "../layouts/main-layout.vue";
+import FormSubmitButton from "../../components/form-submit-button.vue";
 import { authMethods } from "../../store/helpers";
 
 export default {
-  components: { Layout },
+  components: { Layout, FormSubmitButton },
   data() {
     return {
       username: "",
@@ -59,10 +60,7 @@ export default {
         type="password"
         :placeholder="placeholders.password"
       />
-      <BaseButton :disabled="tryingToLogIn" type="submit">
-        <BaseIcon v-if="tryingToLogIn" name="sync" spin />
-        <span v-else> Log in </span>
-      </BaseButton>
+      <form-submit-button :clicked="tryingToLogIn">Log in</form-submit-button>
       <p v-if="authError">There was an error logging in to your account.</p>
     </form>
   </Layout>
